@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Cloudinary sample</title>
+</head>
+<body>
+<form action="/posts" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+<input class="input-xlarge" id="picture" name="uploaded_data" type="file">
+<input type="submit" value="投稿">
+</form>
+<ul class="posts">
+  <% @posts.each do |post| %>
+  <li class="post">
+    <img src="<%= post.image %>" alt="">
+  </li>
+  <% end %>
+</ul>
+</body>
+</html>
